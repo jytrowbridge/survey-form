@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <div class="fixed-background">
+        </div>
+        <div class="wrapper">
+            <div id="title">
+                <h1>Shrek Survey</h1>
+            </div>
+            <div id="description">
+                <p>Thank you for taking time to help us out</p>
+            </div>
+            <div id="survey-wrapper">
+                <form action="" method="POST">
+                    <div class="survey-question">
+                        <p class="survey-question-title">Name</p>
+                        <input type="text" class="survey-text-input" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="survey-question">
+                        <p class="survey-question-title">Email Address</p>
+                        <input type="email" class="survey-text-input" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    <div class="survey-question">
+                        <p class="survey-question-title">Age (Optional)</p>
+                        <input type="number" class="survey-text-input" id="age" name="age" placeholder="Enter your age">
+                    </div>
+                    <div class="survey-question">
+                        <p class="survey-question-title">Would you like to sign up for Shrek Daily Fun Facts?</p>
+                        <div class="radio-input-option">
+                            <input type="radio" class="survery-radio-input" id="fun-facts-yes" name="fun-facts" value="yes" checked>
+                            <label for="fun-facts-yes" class="survey-radio-label">Yes!</label>
+                        </div>
+                        <div class="radio-input-option">
+                            <input type="radio" class="survery-radio-input" id="fun-facts-no" name="fun-facts" value="no">
+                            <label for="fun-facts-no" class="survey-radio-label">No, thank you</label>
+                        </div>
+                    </div>
+                    <div class="survey-question">
+                        <p class="survey-question-title">Which song from the Shrek soundtrack is your favorite?</p>
+                        <select id="song" name="song">
+                            <option value="">--Please choose a song--</option>
+                            <option value="stay home">"Stay Home" by Self</option>
+                            <option value="im a believer">"I'm a Believer" by Smash Mouth</option>
+                            <option value="like wow">"Like Wow!" by Leslie Carter</option>
+                            <option value="it is you i have loved">"It Is You (I Have Loved)" by Dana Glover</option>
+                            <option value="best years of our lives">"Best Years of Our Lives" by Baha Men</option>
+                            <option value="bad reputation">"Bad Reputtaion" by Halfcocked</option>
+                            <option value="my beloved monster">"My Beloved Monster" by Eels</option>
+                            <option value="you belong to me">"You Belong to Me" by Jason Wade</option>
+                            <option value="all star">"All Star" by Smash Mouth</option>
+                            <option value="hallelujah">"Hallelujah" by Rufus Wainwright</option>
+                            <option value="im on my way">"I'm on My Way" by The Proclaimers</option>
+                            <option value="im a believer reprise">"I'm a Believer (Reprise) by Eddie Murphey</option>
+                            <option value="true loves first kiss">"True Love's First Kiss" by John Powell</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <p class="survey-question-title">Pick your favorite Shrek picture:</p>
+                        <div class="image-container">
+                            <div class="img-box">
+                                <label>
+                                    <input type="radio" id="shrek-option-1" name="shrek-pics" checked>
+                                    <img src="img/shrek-8.jpg" class="small-img"
+                                    alt="shrek option 1">
+                                </label>
+                            </div>
+                            <div class="img-box">
+                                <label>
+                                    <input type="radio" id="shrek-option-2" name="shrek-pics" >
+                                    <img src="img/shrek-2.jpg" class="small-img"
+                                    alt="shrek option 2">
+                                </label>
+                            </div>
+                            <div class="img-box">
+                                <label>
+                                    <input type="radio" id="shrek-option-3" name="shrek-pics" >
+                                    <img src="img/shrek-3.jpeg" class="small-img"
+                                    alt="shrek option 3">
+                                </label>
+                            </div>
+                            <div class="img-box">
+                                <label>
+                                    <input type="radio" id="shrek-option-4" name="shrek-pics" >
+                                    <img src="img/shrek-4.jpg" class="small-img"
+                                    alt="shrek option 4">
+                                </label>
+                            </div>
+                            <div class="img-box">
+                                <label>
+                                    <input type="radio" id="shrek-option-5" name="shrek-pics" >
+                                    <img src="img/shrek-5.jpg" class="small-img"
+                                    alt="shrek option 5">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="survey-question">
+                        <label for="comments" class="survey-question-title">Please add any additional comments below:</label>
+                        <textarea id="comments" name="comments" rows="5" columns="10" placeholder="Add your comments here"></textarea>
+                    </div>
+                    <div class="survey-question">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>

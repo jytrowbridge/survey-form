@@ -1,0 +1,172 @@
+html {
+    color: white;
+    font-family: sans-serif;
+}
+/* *********************
+    background image
+*/
+
+.fixed-background {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../img/shrek-background.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+}
+
+/* *********************
+    background color w/ reduced opacity
+*/
+
+.wrapper {
+    position: relative;
+    display:block;
+    height: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 5rem;
+}
+.wrapper::after {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -2;
+    content: "";
+}
+
+/* adjust padding size for smaller screns */
+@media screen and (max-width: 1000px){
+    .wrapper {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+#title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#description {
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#survey-wrapper {
+    position: relative;
+    display:block;
+    height: auto;
+    padding: 1px 2rem;
+    margin-top: 10px;
+}
+#survey-wrapper::after {
+    background-color: green;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    content: "";
+    border-radius: 10px;
+    border: 5px solid rgb(3, 77, 3);
+}
+
+.survey-question {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.survey-question-title {
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+input.survey-text-input {
+    display:block; 
+    width:100%;
+    padding:0.25rem;
+    border-width:0;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.radio-input-option {
+    padding-top: 5px;
+}
+
+select {
+    width: 100%;
+}
+
+.img-box {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 150px;
+    height: auto;
+}
+  
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.small-img {
+    width: 100%;
+    border: 4px solid transparent; 
+    border-radius: 10px;
+}
+
+.img-box input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+    /* outline: 4px solid red; */
+    border: 4px solid black;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+    cursor: pointer;
+}
+
+#comments {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgb(2, 65, 2);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
